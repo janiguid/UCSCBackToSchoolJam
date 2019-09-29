@@ -26,22 +26,56 @@ public class ControlManager : MonoBehaviour
     [SerializeField]
     private SimpleCameraController cameraTarget;
 
+    public bool playerMovesWithLight;
+
+    private void Start()
+    {
+        //Game starts with camera focusing on P1
+        //while P2 is moving
+        P1.SetMoveState(false);
+        P2.SetMoveState(true);
+        cameraTarget.SetTarget(P1.transform);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        
+        if (playerMovesWithLight)
         {
-            if(P1.GetMoveState() == true && P2.GetMoveState() == false)
+            //prototype version
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                P1.SetMoveState(false);
-                P2.SetMoveState(true);
-                cameraTarget.SetTarget(P2.transform);
-            }else if(P2.GetMoveState() == true && P1.GetMoveState() == false)
+                if (P1.GetMoveState() == true && P2.GetMoveState() == false)
+                {
+                    P1.SetMoveState(false);
+                    P2.SetMoveState(true);
+                    cameraTarget.SetTarget(P2.transform);
+                }
+                else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
+                {
+                    P2.SetMoveState(false);
+                    P1.SetMoveState(true);
+                    cameraTarget.SetTarget(P1.transform);
+                }
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                P2.SetMoveState(false);
-                P1.SetMoveState(true);
-                cameraTarget.SetTarget(P1.transform);
+                if (P1.GetMoveState() == true && P2.GetMoveState() == false)
+                {
+                    P1.SetMoveState(false);
+                    P2.SetMoveState(true);
+                    cameraTarget.SetTarget(P1.transform);
+                }
+                else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
+                {
+                    P2.SetMoveState(false);
+                    P1.SetMoveState(true);
+                    cameraTarget.SetTarget(P2.transform);
+                }
             }
         }
     }

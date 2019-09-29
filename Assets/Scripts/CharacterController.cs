@@ -5,6 +5,11 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [SerializeField]
+    private float PlayerXBound;
+    [SerializeField]
+    private float PlayerYBound;
+
+    [SerializeField]
     private Rigidbody2D rigidbody2D;
     [SerializeField]
     private CharacterController partner;
@@ -15,6 +20,7 @@ public class CharacterController : MonoBehaviour
     private float speed;
 
     Vector2 movement;
+    Vector2 finalPosition;
 
     // Update is called once per frame
     void Update()
@@ -30,6 +36,8 @@ public class CharacterController : MonoBehaviour
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
 
+            
+
         }
 
     }
@@ -39,30 +47,18 @@ public class CharacterController : MonoBehaviour
     //and might cause physics calculations to act weirdly
     private void FixedUpdate()
     {
+        finalPosition = rigidbody2D.position + movement* speed * Time.fixedDeltaTime;
+        ClampMovement();
         //we multiply movement by Time.fixedDeltaTime to make calculations constant
-        rigidbody2D.MovePosition(rigidbody2D.position + movement * speed * Time.fixedDeltaTime);
+        rigidbody2D.MovePosition(finalPosition);
     }
 
-    //void SwitchControl()
-    //{
-    //    //Make partner move
-    //    partner.ActivateMovement();
 
-    //    //Stop me from moving
-    //    DeactivateMovement();
-
-
-    //}
-
-    //public void ActivateMovement()
-    //{
-    //    isMoving = true;
-    //}
-
-    //void DeactivateMovement()
-    //{
-    //    isMoving = false;
-    //}
+    private void ClampMovement()
+    {
+        finalPosition.x = Mathf.Clamp(finalPosition.x, -PlayerXBound, PlayerXBound);
+        finalPosition.y = Mathf.Clamp(finalPosition.y, -PlayerYBound, PlayerYBound);
+    }
 
     public bool GetMoveState()
     {
