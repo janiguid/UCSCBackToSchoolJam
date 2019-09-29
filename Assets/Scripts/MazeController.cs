@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MazeController : MonoBehaviour
 {
-    public Sprite wall;
+    public GameObject wall;
     public int size;
 
     public Vector3 startLocation;
@@ -25,6 +25,11 @@ public class MazeController : MonoBehaviour
             right = start;
             up = start;
             down = start;
+        }
+
+        public override string ToString()
+        {
+            return "Walls to the: left? " + left + " right? " + right + " up? " + up + " down? " + down;
         }
     }
 
@@ -97,10 +102,44 @@ public class MazeController : MonoBehaviour
 
         endLocation = startLocation;
 
-        CheckNode(startLocation, distance);
+        Node node = new Node(false);
+
+        CheckNode(startLocation, distance, node);
+
+        foreach (Node finishedNode in maze.Values)
+        {
+            Debug.Log(finishedNode);
+        }
+
+        for (int a = 0; a < size + 1; a++)
+        {
+            for (int b = 0; b < size + 1; b++)
+            {
+                if (maze.TryGetValue(new twoInts(a, b), out node))
+                {
+                    if (!node.left)
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3(a - 0.5f, b, 0), Quaternion.identity, transform);
+                    }
+                    if (!node.right)
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3(a + 0.5f, b, 0), Quaternion.identity, transform);
+                    }
+                    if (!node.up)
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3(a, b + 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                    }
+                    if (!node.down)
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3(a, b - 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                    }
+                }
+
+            }
+        }
     }
 
-    private bool CheckNode(Vector3 location, int distance)
+    private bool CheckNode(Vector3 location, int distance, Node node)
     {
         if (location.x < 0 || location.x > size || location.y < 0 || location.y > size)
         {
@@ -110,8 +149,6 @@ public class MazeController : MonoBehaviour
         {
             return false;
         }
-
-        Node node = new Node(false);
 
         maze.Add(new twoInts((int)location.x, (int)location.y), node);
 
@@ -126,15 +163,25 @@ public class MazeController : MonoBehaviour
 
         for (int i = 0; i < 4; i ++)
         {
-            switch(start)
+            Node newNode = new Node(false);
+
+            switch (start)
             {
-                case 0: node.right = CheckNode(location + Vector3.right, distance + 1);
+                case 0:
+                    newNode.left = true;
+                    node.right = node.right || CheckNode(location + Vector3.right, distance + 1, newNode);
                     break;
-                case 1: node.left = CheckNode(location + Vector3.left, distance + 1);
+                case 1:
+                    newNode.right = true;
+                    node.left = node.left || CheckNode(location + Vector3.left, distance + 1, newNode);
                     break;
-                case 2: node.up = CheckNode(location + Vector3.up, distance + 1);
+                case 2:
+                    newNode.down = true;
+                    node.up = node.up || CheckNode(location + Vector3.up, distance + 1, newNode);
                     break;
-                case 3: node.down = CheckNode(location + Vector3.down, distance + 1);
+                case 3:
+                    newNode.up = true;
+                    node.down = node.down || CheckNode(location + Vector3.down, distance + 1, newNode);
                     break;
             }
 
@@ -154,6 +201,9 @@ public class MazeController : MonoBehaviour
                 }
             }
         }
+
+        maze.Remove(new twoInts((int)location.x, (int)location.y));
+        maze.Add(new twoInts((int)location.x, (int)location.y), node);
 
         return true;
     }
