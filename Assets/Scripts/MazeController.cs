@@ -18,18 +18,33 @@ public class MazeController : MonoBehaviour
         public bool right;
         public bool up;
         public bool down;
+        public int distance;
 
-        public Node(bool start)
+        public Node(bool start, int dist)
         {
             left = start;
             right = start;
             up = start;
             down = start;
+
+            distance = dist;
         }
 
         public override string ToString()
         {
-            return "Walls to the: left? " + left + " right? " + right + " up? " + up + " down? " + down;
+            return "Dist: " + distance + ". Walls to the: left? " + left + " right? " + right + " up? " + up + " down? " + down;
+        }
+
+        public static Node operator + (Node n1, Node n2)
+        {
+            Node node = new Node(false, n1.distance);
+
+            node.left = n1.left || n2.left;
+            node.right = n1.right || n2.right;
+            node.up = n1.up || n2.up;
+            node.down = n1.down || n2.down;
+
+            return node;
         }
     }
 
@@ -94,7 +109,7 @@ public class MazeController : MonoBehaviour
 
     private void Generator()
     {
-        Node startNode = new Node(false);
+        Node startNode = new Node(false, 0);
 
         pathLength = 0;
 
@@ -102,53 +117,65 @@ public class MazeController : MonoBehaviour
 
         endLocation = startLocation;
 
-        Node node = new Node(false);
+        CheckNode(startLocation, distance, startNode, out startNode);
 
-        CheckNode(startLocation, distance, node);
+        //foreach (Node finishedNode in maze.Values)
+        //{
+        //    Debug.Log(finishedNode);
+        //}
 
-        foreach (Node finishedNode in maze.Values)
-        {
-            Debug.Log(finishedNode);
-        }
+        //Node node;
 
-        for (int a = 0; a < size + 1; a++)
-        {
-            for (int b = 0; b < size + 1; b++)
-            {
-                if (maze.TryGetValue(new twoInts(a, b), out node))
-                {
-                    if (!node.left)
-                    {
-                        GameObject obj = Instantiate(wall, new Vector3(a - 0.5f, b, 0), Quaternion.identity, transform);
-                    }
-                    if (!node.right)
-                    {
-                        GameObject obj = Instantiate(wall, new Vector3(a + 0.5f, b, 0), Quaternion.identity, transform);
-                    }
-                    if (!node.up)
-                    {
-                        GameObject obj = Instantiate(wall, new Vector3(a, b + 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
-                    }
-                    if (!node.down)
-                    {
-                        GameObject obj = Instantiate(wall, new Vector3(a, b - 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
-                    }
-                }
+        //for (int a = 0; a < size + 1; a++)
+        //{
+        //    for (int b = 0; b < size + 1; b++)
+        //    {
+        //        if (maze.TryGetValue(new twoInts(a, b), out node))
+        //        {
+        //            if (!node.left)
+        //            {
+        //                GameObject obj = Instantiate(wall, new Vector3(a - 0.5f, b, 0), Quaternion.identity, transform);
+        //            }
+        //            if (!node.right)
+        //            {
+        //                GameObject obj = Instantiate(wall, new Vector3(a + 0.5f, b, 0), Quaternion.identity, transform);
+        //            }
+        //            if (!node.up)
+        //            {
+        //                GameObject obj = Instantiate(wall, new Vector3(a, b + 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+        //            }
+        //            if (!node.down)
+        //            {
+        //                GameObject obj = Instantiate(wall, new Vector3(a, b - 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+        //            }
+        //        }
 
-            }
-        }
+        //    }
+        //}
     }
 
-    private bool CheckNode(Vector3 location, int distance, Node node)
+    private bool CheckNode(Vector3 location, int distance, Node node, out Node nodeOut)
     {
         if (location.x < 0 || location.x > size || location.y < 0 || location.y > size)
         {
+            nodeOut = new Node(false, -1);
             return false;
         }
-        else if (maze.ContainsKey(new twoInts((int)location.x, (int)location.y)))
+        else if (maze.TryGetValue(new twoInts((int)location.x, (int)location.y), out nodeOut))
         {
+            int rand = Random.Range(0, 8);
+            if (rand == 0)
+            {
+                nodeOut = nodeOut + node;
+
+                maze.Remove(new twoInts((int)location.x, (int)location.y));
+                maze.Add(new twoInts((int)location.x, (int)location.y), nodeOut);
+                return true;
+            }
             return false;
         }
+
+        //Debug.Log(node);
 
         maze.Add(new twoInts((int)location.x, (int)location.y), node);
 
@@ -163,25 +190,43 @@ public class MazeController : MonoBehaviour
 
         for (int i = 0; i < 4; i ++)
         {
-            Node newNode = new Node(false);
+            Node newNode = new Node(false, node.distance + 1);
+
+            //Debug.Log(newNode);
 
             switch (start)
             {
                 case 0:
                     newNode.left = true;
-                    node.right = node.right || CheckNode(location + Vector3.right, distance + 1, newNode);
+                    node.right = node.right || CheckNode(location + Vector3.right, distance + 1, newNode, out newNode);
+                    if(!node.right && (newNode.distance == -1 || node.distance > newNode.distance))
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x + 0.5f, (int)location.y, 0), Quaternion.identity, transform);
+                    }
                     break;
                 case 1:
                     newNode.right = true;
-                    node.left = node.left || CheckNode(location + Vector3.left, distance + 1, newNode);
+                    node.left = node.left || CheckNode(location + Vector3.left, distance + 1, newNode, out newNode);
+                    if (!node.left && (newNode.distance == -1 || node.distance > newNode.distance))
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x - 0.5f, (int)location.y, 0), Quaternion.identity, transform);
+                    }
                     break;
                 case 2:
                     newNode.down = true;
-                    node.up = node.up || CheckNode(location + Vector3.up, distance + 1, newNode);
+                    node.up = node.up || CheckNode(location + Vector3.up, distance + 1, newNode, out newNode);
+                    if (!node.up && (newNode.distance == -1 || node.distance > newNode.distance))
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x, (int)location.y + 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                    }
                     break;
                 case 3:
                     newNode.up = true;
-                    node.down = node.down || CheckNode(location + Vector3.down, distance + 1, newNode);
+                    node.down = node.down || CheckNode(location + Vector3.down, distance + 1, newNode, out newNode);
+                    if (!node.down && (newNode.distance == -1 || node.distance > newNode.distance))
+                    {
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x, (int)location.y - 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                    }
                     break;
             }
 
@@ -204,6 +249,8 @@ public class MazeController : MonoBehaviour
 
         maze.Remove(new twoInts((int)location.x, (int)location.y));
         maze.Add(new twoInts((int)location.x, (int)location.y), node);
+
+        nodeOut = node;
 
         return true;
     }
