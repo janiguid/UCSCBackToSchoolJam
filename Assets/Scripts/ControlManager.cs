@@ -30,52 +30,77 @@ public class ControlManager : MonoBehaviour
 
     private void Start()
     {
+        //Uncomment this for the intended gameplay
         //Game starts with camera focusing on P1
         //while P2 is moving
-        P1.SetMoveState(false);
-        P2.SetMoveState(true);
+        //P1.SetMoveState(false);
+        //P2.SetMoveState(true);
+        //cameraTarget.SetTarget(P1.transform);
+
+        //Code below is just for testing purposes
+        P1.SetMoveState(true);
+        P2.SetMoveState(false);
         cameraTarget.SetTarget(P1.transform);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (playerMovesWithLight)
+        //Uncomment this for testing design
+        //if (playerMovesWithLight)
+        //{
+        //    //prototype version
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        if (P1.GetMoveState() == true && P2.GetMoveState() == false)
+        //        {
+        //            P1.SetMoveState(false);
+        //            P2.SetMoveState(true);
+        //            cameraTarget.SetTarget(P2.transform);
+        //        }
+        //        else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
+        //        {
+        //            P2.SetMoveState(false);
+        //            P1.SetMoveState(true);
+        //            cameraTarget.SetTarget(P1.transform);
+        //        }
+        //    }
+        //}
+        //else
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        if (P1.GetMoveState() == true && P2.GetMoveState() == false)
+        //        {
+        //            P1.SetMoveState(false);
+        //            P2.SetMoveState(true);
+        //            cameraTarget.SetTarget(P1.transform);
+        //        }
+        //        else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
+        //        {
+        //            P2.SetMoveState(false);
+        //            P1.SetMoveState(true);
+        //            cameraTarget.SetTarget(P2.transform);
+        //        }
+        //    }
+        //}
+
+
+
+        //prototype version
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            //prototype version
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (P1.GetMoveState() == true && P2.GetMoveState() == false)
             {
-                if (P1.GetMoveState() == true && P2.GetMoveState() == false)
-                {
-                    P1.SetMoveState(false);
-                    P2.SetMoveState(true);
-                    cameraTarget.SetTarget(P2.transform);
-                }
-                else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
-                {
-                    P2.SetMoveState(false);
-                    P1.SetMoveState(true);
-                    cameraTarget.SetTarget(P1.transform);
-                }
+                P1.SetMoveState(false);
+                P2.SetMoveState(true);
+                cameraTarget.SetTarget(P2.transform);
             }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+            else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
             {
-                if (P1.GetMoveState() == true && P2.GetMoveState() == false)
-                {
-                    P1.SetMoveState(false);
-                    P2.SetMoveState(true);
-                    cameraTarget.SetTarget(P1.transform);
-                }
-                else if (P2.GetMoveState() == true && P1.GetMoveState() == false)
-                {
-                    P2.SetMoveState(false);
-                    P1.SetMoveState(true);
-                    cameraTarget.SetTarget(P2.transform);
-                }
+                P2.SetMoveState(false);
+                P1.SetMoveState(true);
+                cameraTarget.SetTarget(P1.transform);
             }
         }
     }

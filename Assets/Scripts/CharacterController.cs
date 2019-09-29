@@ -22,6 +22,9 @@ public class CharacterController : MonoBehaviour
     Vector2 movement;
     Vector2 finalPosition;
 
+
+    public Animator anim;
+
     // Update is called once per frame
     void Update()
     {
@@ -35,10 +38,15 @@ public class CharacterController : MonoBehaviour
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
-
-            
-
         }
+        else
+        {
+            movement = Vector2.zero;
+        }
+
+        anim.SetFloat("Horizontal", movement.x);
+        anim.SetFloat("Vertical", movement.y);
+        anim.SetFloat("Speed", movement.sqrMagnitude);
 
     }
 
