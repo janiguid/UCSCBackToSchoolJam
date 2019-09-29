@@ -6,6 +6,7 @@ public class MazeController : MonoBehaviour
 {
     public GameObject wall;
     public int size;
+    public Sprite[] trees;
 
     public Vector3 startLocation;
     public Vector3 endLocation;
@@ -105,6 +106,11 @@ public class MazeController : MonoBehaviour
         startLocation = new Vector3(Random.Range(0, size + 1), Random.Range(0, size + 1), 0);
 
         Generator();
+
+        GameObject Zul = GameObject.Find("Zul");
+        Zul.transform.position = startLocation * 2;
+        GameObject Ros = GameObject.Find("Ros");
+        Ros.transform.position = endLocation * 2;
     }
 
     private void Generator()
@@ -201,7 +207,8 @@ public class MazeController : MonoBehaviour
                     node.right = node.right || CheckNode(location + Vector3.right, distance + 1, newNode, out newNode);
                     if(!node.right && (newNode.distance == -1 || node.distance > newNode.distance))
                     {
-                        GameObject obj = Instantiate(wall, new Vector3((int)location.x + 0.5f, (int)location.y, 0), Quaternion.identity, transform);
+                        GameObject obj = Instantiate(wall, new Vector3(((int)location.x + 0.5f) * 2, (int)location.y * 2, 0), Quaternion.identity, transform);
+                        obj.GetComponent<SpriteRenderer>().sprite = trees[Random.Range(0, trees.Length)];
                     }
                     break;
                 case 1:
@@ -209,7 +216,8 @@ public class MazeController : MonoBehaviour
                     node.left = node.left || CheckNode(location + Vector3.left, distance + 1, newNode, out newNode);
                     if (!node.left && (newNode.distance == -1 || node.distance > newNode.distance))
                     {
-                        GameObject obj = Instantiate(wall, new Vector3((int)location.x - 0.5f, (int)location.y, 0), Quaternion.identity, transform);
+                        GameObject obj = Instantiate(wall, new Vector3(((int)location.x - 0.5f) * 2, (int)location.y * 2, 0), Quaternion.identity, transform);
+                        obj.GetComponent<SpriteRenderer>().sprite = trees[Random.Range(0, trees.Length)];
                     }
                     break;
                 case 2:
@@ -217,7 +225,8 @@ public class MazeController : MonoBehaviour
                     node.up = node.up || CheckNode(location + Vector3.up, distance + 1, newNode, out newNode);
                     if (!node.up && (newNode.distance == -1 || node.distance > newNode.distance))
                     {
-                        GameObject obj = Instantiate(wall, new Vector3((int)location.x, (int)location.y + 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x * 2, ((int)location.y + 0.5f) * 2, 0), Quaternion.Euler(0, 0, 90), transform);
+                        obj.GetComponent<SpriteRenderer>().sprite = trees[Random.Range(0, trees.Length)];
                     }
                     break;
                 case 3:
@@ -225,7 +234,8 @@ public class MazeController : MonoBehaviour
                     node.down = node.down || CheckNode(location + Vector3.down, distance + 1, newNode, out newNode);
                     if (!node.down && (newNode.distance == -1 || node.distance > newNode.distance))
                     {
-                        GameObject obj = Instantiate(wall, new Vector3((int)location.x, (int)location.y - 0.5f, 0), Quaternion.Euler(0, 0, 90), transform);
+                        GameObject obj = Instantiate(wall, new Vector3((int)location.x * 2, ((int)location.y - 0.5f) * 2, 0), Quaternion.Euler(0, 0, 90), transform);
+                        obj.GetComponent<SpriteRenderer>().sprite = trees[Random.Range(0, trees.Length)];
                     }
                     break;
             }
