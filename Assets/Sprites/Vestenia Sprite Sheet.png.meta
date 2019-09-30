@@ -1,0 +1,475 @@
+fileFormatVersion: 2
+guid: 35ab0ebb82794c441a8e48858ee7d674
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6140094844538556743
+    second: Vestenia Sprite Sheet_0
+  - first:
+      213: 1123464195462817221
+    second: Vestenia Sprite Sheet_1
+  - first:
+      213: -776222695504636793
+    second: Vestenia Sprite Sheet_2
+  - first:
+      213: 5751799715716177843
+    second: Vestenia Sprite Sheet_3
+  - first:
+      213: -1120135304804337190
+    second: Vestenia Sprite Sheet_4
+  - first:
+      213: 2550935562610730206
+    second: Vestenia Sprite Sheet_5
+  - first:
+      213: -3944358234327013309
+    second: Vestenia Sprite Sheet_6
+  - first:
+      213: -5854330506895622200
+    second: Vestenia Sprite Sheet_7
+  - first:
+      213: -5274859303501828292
+    second: Vestenia Sprite Sheet_8
+  - first:
+      213: -4555785716796536746
+    second: Vestenia Sprite Sheet_9
+  - first:
+      213: -1454692021956723405
+    second: Vestenia Sprite Sheet_10
+  - first:
+      213: -3382181670804401220
+    second: Vestenia Sprite Sheet_11
+  - first:
+      213: -8748209750155874286
+    second: Vestenia Sprite Sheet_12
+  - first:
+      213: 7242035140996085128
+    second: Vestenia Sprite Sheet_13
+  - first:
+      213: 7632871978291392470
+    second: Vestenia Sprite Sheet_14
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1330
+        width: 66
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ca3eb2b739af347b565258beac2c08
+      internalID: -6140094844538556743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 786
+        width: 496
+        height: 682
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f649f4bed1ea054f8a70f2e8236c01b
+      internalID: 1123464195462817221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 1035
+        width: 494
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1922e9caeb179c645aae9690d4a52efd
+      internalID: -776222695504636793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 421
+        width: 547
+        height: 676
+      alignment: 9
+      pivot: {x: 0.9784934, y: 0.11781275}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f090c4654547bd47a8bcca88157e2fa
+      internalID: 5751799715716177843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1031
+        width: 106
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fd60b97ffea3a46912564da3a4382b
+      internalID: -1120135304804337190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 1028
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f41031d8f581242be877f65098946d
+      internalID: 2550935562610730206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 1025
+        width: 37
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4565c382a68b3e48b7f1f84ceb61394
+      internalID: -3944358234327013309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1025
+        width: 13
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91918ad930b0c174f847d9c66064f6ff
+      internalID: -5854330506895622200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 294
+        width: 577
+        height: 478
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9501001ba1f2ffa4da350f6e34af5890
+      internalID: -5274859303501828292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 707
+        width: 286
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ac8a5ea72cffe4c87c1f5e5631a323
+      internalID: -4555785716796536746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 508
+        width: 148
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3968bbd8f5c7447ae31fe2039f6676
+      internalID: -1454692021956723405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 22
+        width: 427
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbc5047511ed0a540a0d6b79225ea043
+      internalID: -3382181670804401220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 64
+        width: 164
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d23e41b0a4b42c488e012506d726994
+      internalID: -8748209750155874286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 66
+        width: 138
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ab225c3201e67468ee299aaa498194
+      internalID: 7242035140996085128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vestenia Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 83
+        width: 266
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc23f9b88280924b821676f6de4a8b0
+      internalID: 7632871978291392470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

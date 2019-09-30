@@ -1,0 +1,403 @@
+fileFormatVersion: 2
+guid: 4155b3c593e388f4eb98787ede9577e0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6532138671449972215
+    second: Firena Sprite Sheet_0
+  - first:
+      213: -4215087718417622286
+    second: Firena Sprite Sheet_1
+  - first:
+      213: 8889428746700071920
+    second: Firena Sprite Sheet_2
+  - first:
+      213: 2465419355798451906
+    second: Firena Sprite Sheet_3
+  - first:
+      213: 1550353696070072298
+    second: Firena Sprite Sheet_4
+  - first:
+      213: -2614927814845927609
+    second: Firena Sprite Sheet_5
+  - first:
+      213: 1018437316383904690
+    second: Firena Sprite Sheet_6
+  - first:
+      213: -7567732678338246681
+    second: Firena Sprite Sheet_7
+  - first:
+      213: 2439929691063172059
+    second: Firena Sprite Sheet_8
+  - first:
+      213: 7832543337105969388
+    second: Firena Sprite Sheet_9
+  - first:
+      213: 710259984934645452
+    second: Firena Sprite Sheet_10
+  - first:
+      213: 6249765835564846612
+    second: Firena Sprite Sheet_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 108
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 940
+        width: 591
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e367519abf5bfd4dbc9393e96517d9c
+      internalID: -6532138671449972215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 1163
+        width: 151
+        height: 160
+      alignment: 9
+      pivot: {x: 0.4658971, y: 0.596553}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc97e248ae63c549abe4517792dc42f
+      internalID: -4215087718417622286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1143
+        width: 207
+        height: 216
+      alignment: 9
+      pivot: {x: 0.58706856, y: 0.47615954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a953c096b7999947ab55720c5b71ce6
+      internalID: 8889428746700071920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1262
+        width: 106
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0214bef0199c5104a9a8c3b07807271d
+      internalID: 2465419355798451906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 1194
+        width: 26
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3f214d6886f4e4793a962b74861ac0
+      internalID: 1550353696070072298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 1145
+        width: 148
+        height: 171
+      alignment: 9
+      pivot: {x: 0.22164752, y: 0.24402998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c784261900e8a954e8635fa15d97c778
+      internalID: -2614927814845927609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 651
+        width: 170
+        height: 145
+      alignment: 9
+      pivot: {x: 0.57572794, y: 0.62429833}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a4ee13afbb35745b0a240d83a1df6f
+      internalID: 1018437316383904690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 674
+        width: 126
+        height: 168
+      alignment: 9
+      pivot: {x: 0.2343503, y: 0.5766293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ec38de6d193d4d4092f398238695e14
+      internalID: -7567732678338246681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 685
+        width: 323
+        height: 218
+      alignment: 9
+      pivot: {x: 0.4999996, y: 0.7952696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 396a7e03af564f847aa4955a8894ee49
+      internalID: 2439929691063172059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 632
+        width: 513
+        height: 425
+      alignment: 9
+      pivot: {x: 0.51003784, y: 0.088039406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a93fd6afa2c2ba4caf81de0eba731fa
+      internalID: 7832543337105969388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 413
+        width: 157
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5655986, y: 0.69505703}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c45796f8ec196248831c3e5b5277c39
+      internalID: 710259984934645452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Firena Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 420
+        width: 157
+        height: 122
+      alignment: 9
+      pivot: {x: 0.4999996, y: 0.7532541}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69f303b9df9ac92439d6824cf5d4f7e1
+      internalID: 6249765835564846612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
